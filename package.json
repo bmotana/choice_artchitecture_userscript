@@ -1,0 +1,40 @@
+{
+  "name": "choice_artchitecture_userscript",
+  "version": "1.0.0",
+  "description": "Userscript to enhance readability by adding spacing to tweet containers on x.com.",
+  "main": "twitter_ container_spacing.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "test": "node --test tests/userscript.test.mjs",
+    "test:all": "npm test && pytest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmotana/choice_artchitecture_userscript.git"
+  },
+  "keywords": [
+    "userscript",
+    "tampermonkey",
+    "twitter",
+    "x-com",
+    "readability",
+    "css",
+    "spacing"
+  ],
+  "author": "Ben Motana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bmotana/choice_artchitecture_userscript/issues"
+  },
+  "homepage": "https://github.com/bmotana/choice_artchitecture_userscript#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
+    "globals": "^17.12.0",
+    "jsdom": "^30.1.1",
+    "prettier": "^3.9.9"
+  }
+}

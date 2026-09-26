@@ -8,28 +8,28 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(function () {
+  'use strict';
 
-    function addSpacingToTweetContainers(className, dataTestId) {
-        const elements = document.querySelectorAll(`.${className}`);
+  function addSpacingToTweetContainers(className, dataTestId) {
+    const elements = document.querySelectorAll(`.${className}`);
 
-        elements.forEach(element => {
-            if (element.querySelector(`article[data-testid="${dataTestId}"]`)) {
-                element.style.marginBottom = '25px'; // Adjust the value for desired spacing
-            }
-        });
-    }
+    elements.forEach((element) => {
+      if (element.querySelector(`article[data-testid="${dataTestId}"]`)) {
+        element.style.marginBottom = '25px'; // Adjust the value for desired spacing
+      }
+    });
+  }
 
-    // Run the function on page load and when new content is loaded
-    function runScript() {
-        addSpacingToTweetContainers('css-175oi2r', 'tweet');
-    }
+  // Run the function on page load and when new content is loaded
+  function runScript() {
+    addSpacingToTweetContainers('css-175oi2r', 'tweet');
+  }
 
-    // Initial run
-    runScript();
+  // Initial run
+  runScript();
 
-    // Run the script again when the page content changes
-    const observer = new MutationObserver(runScript);
-    observer.observe(document.body, { childList: true, subtree: true });
+  // Run the script again when the page content changes
+  const observer = new MutationObserver(runScript);
+  observer.observe(document.body, { childList: true, subtree: true });
 })();
