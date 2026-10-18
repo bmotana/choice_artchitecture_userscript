@@ -47,6 +47,28 @@ element.style.marginBottom = '25px'; // Adjust the pixel value to your liking (e
 
 ---
 
+## Development Checks
+
+The repository includes automated checks for the userscript and its project tooling. To run the JavaScript checks locally:
+
+```bash
+npm ci
+npm run format:check
+npm run lint
+npm test
+```
+
+The JavaScript tests validate the userscript metadata, spacing behavior on tweet containers, and spacing for tweets added dynamically. The GitHub Actions workflow runs these checks on pushes and pull requests targeting `main`.
+
+The workflow also checks the repository's Python tooling with Ruff and Pytest. Install those tools and run the same checks with:
+
+```bash
+python -m pip install ruff pytest
+ruff check .
+ruff format --check .
+pytest
+```
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
